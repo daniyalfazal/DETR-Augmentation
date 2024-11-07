@@ -19,7 +19,7 @@ os.makedirs(augmented_images_directory, exist_ok=True)
 with open(one_percent_annotations_path, 'r') as f: 
     one_pct_data = json.load(f)
 
-# Performing the Augmentation techniques on the dataset being used. (Effect of each technique is further explained in detail in the paper)
+# Performing the Augmentation techniques on the dataset being used. (Effects of each technique is further explained in detail in the paper)
 augmenter = A.Compose([
     A.HorizontalFlip(p=0.5),
     A.VerticalFlip(p=0.2), 
