@@ -9,6 +9,33 @@ The code that I have added for this project consists of the following three main
  - coco_divider.py : This file is used to create the subset that we need for the purpose of our project. It takes in the path to the original COCO dataset and then creates a new folder that is a specific percentage of the original dataset and only based on particular object classes of the dataset. (Needs to be run multiple times since it can handle only one direcotry at a time and the COCO dataset has a train and val dataset) 
  - val_creator.py : This file takes in the path of the original test dataset and creates a subset that is again a sepcific percentage of the original dataset and only based off the same object classes that are present in the training dataset. It also ensures that none of the images in the test dataset are the same as the ones in the validation dataset for the training part.
 
+Once cloning the repository the following command should help install all the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+For ease of use I have provided the links to the datasets used below which can be downloaded and run locally or be accessed through the google drive links below:
+
+ - 1_percent_subset :
+ - Augmented_1_percent_subset :
+ - Test_set :
+
+After the datasets are ready to be used the following two commands were the ones I used in order to train the model from scratch on the 1 percent dataset and then the same set with augmentations.
+
+```bash
+!python /content/drive/MyDrive/detr/main.py --dataset_file coco --coco_path /content/drive/MyDrive/coco_subset_20_classes/ --batch_size 12 --epochs 20 --lr_drop 15 --output_dir /content/drive/MyDrive/detr/first_training/  --num_workers 4 --lr 2e-4 --weight_decay 1e-4 --lr_backbone 1e-5
+```
+
+```bash
+!python /content/drive/MyDrive/detr/main.py --dataset_file coco --coco_path /content/drive/MyDrive/Augmented_coco_subset_20_classes/ --batch_size 12 --epochs 20 --lr_drop 15 --output_dir /content/drive/MyDrive/detr/second_training/  --num_workers 4 --lr 2e-4 --weight_decay 1e-4 --lr_backbone 1e-5
+```
+
+Each command stores the results in directories called first_training and second_training (I have included my results as a part of this Github repo). Once you have these results of the training process (wieghts) we can test the model with those weights on the test data set.
+
+Running the 4th Python file called results.py that can be found in the folder which has my code will run inference on the test dataset and then print the results for you. 
+
+
 # Orginial README from DETR Repo
 
 PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
