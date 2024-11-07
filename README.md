@@ -33,7 +33,7 @@ After the datasets are ready to be used the following two commands were the ones
 
 Each command stores the results in directories called first_training and second_training (I have included my results as a part of this Github repo). Once you have these results of the training process (wieghts) we can test the model with those weights on the test data set.
 
-Running the 4th Python file called results.py that can be found in the folder which has my code will run inference on the test dataset and then print the results for you. 
+Running the 4th Python file called results.py that can be found in the folder which has my code will run inference on the test dataset and then print the results for you. (The paths would need to be modified according to which environment you are running in and where the files are stored).
 
 
 # Orginial README from DETR Repo
