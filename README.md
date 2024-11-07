@@ -1,4 +1,4 @@
-**DE⫶TR**: End-to-End Object Detection with Transformers
+**DE⫶TR**: Augemntation Applied to End-to-End Object Detection with Transformers 
 ========
 
 PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
