@@ -1,5 +1,15 @@
-**DE⫶TR**: Augemntation Applied to End-to-End Object Detection with Transformers 
+**DE⫶TR**: Augmentation Applied to End-to-End Object Detection with Transformers 
 ========
+
+# 570 Project Details
+This README file is an updated version of the original DETR README file. All of the following information under this section explain how to use this github repo and the code that I have provided in order to replicate the results that I obtained for this project. 
+
+The code that I have added for this project consists of the following three main files:
+ - Augment.py : This file has the code that performs the Augmentations using 5 different techniques of data augmentation
+ - coco_divider.py : This file is used to create the subset that we need for the purpose of our project. It takes in the path to the original COCO dataset and then creates a new folder that is a specific percentage of the original dataset and only based on particular object classes of the dataset. (Needs to be run multiple times since it can handle only one direcotry at a time and the COCO dataset has a train and val dataset) 
+ - val_creator.py : This file takes in the path of the original test dataset and creates a subset that is again a sepcific percentage of the original dataset and only based off the same object classes that are present in the training dataset. It also ensures that none of the images in the test dataset are the same as the ones in the validation dataset for the training part.
+
+# Orginial README from DETR Repo
 
 PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
 We replace the full complex hand-crafted object detection pipeline with a Transformer, and match Faster R-CNN with a ResNet-50, obtaining **42 AP** on COCO using half the computation power (FLOPs) and the same number of parameters. Inference in 50 lines of PyTorch.
