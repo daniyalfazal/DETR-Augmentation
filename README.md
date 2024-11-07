@@ -17,9 +17,9 @@ pip install -r requirements.txt
 
 For ease of use I have provided the links to the datasets used below which can be downloaded and run locally or be accessed through the google drive links below:
 
- - 1_percent_subset :
- - Augmented_1_percent_subset :
- - Test_set :
+ - 1_percent_subset : https://drive.google.com/drive/folders/1bluotiu2ke2X0D4d7_TiJ8gHj3kn-E00?usp=sharing
+ - Augmented_1_percent_subset : https://drive.google.com/drive/folders/10ocY3ECxyUC4ENI3WnnjEF2IwVUtqs37?usp=sharing
+ - Test_set :https://drive.google.com/drive/folders/1xs6iiVQF_I-XFHCen7LM7XBsmmIz1W3V?usp=sharing
 
 After the datasets are ready to be used the following two commands were the ones I used in order to train the model from scratch on the 1 percent dataset and then the same set with augmentations.
 
