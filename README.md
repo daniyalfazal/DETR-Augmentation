@@ -36,6 +36,8 @@ Each command stores the results in directories called first_training and second_
 Running the 4th Python file called results.py that can be found in the folder which has my code will run inference on the test dataset and then print the results for you. (The paths would need to be modified according to which environment you are running in and where the files are stored).
 
 
+NOTE : For the Demonstration Video that is available on this repository, please download it and view it if you are unable to view it directly on Github.com
+
 # Orginial README from DETR Repo
 
 PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
